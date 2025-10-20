@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Kaiburr Task 1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0d1117, #1a1f29);
+            color: #fff;
+            text-align: center;
+            padding: 60px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #58a6ff;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .box {
+            margin: 50px auto;
+            padding: 30px;
+            background: #161b22;
+            border-radius: 16px;
+            width: 60%;
+            box-shadow: 0 0 15px rgba(88,166,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 th:text="${title}"></h1>
+        <p th:text="${message}"></p>
+        <p th:text="${instructions}"></p>
+
+        <hr style="margin: 20px 0; opacity: 0.3;">
+        <h2>Available Endpoints</h2>
+        <ul style="list-style:none; font-size:1.1rem;">
+            <li>GET /tasks</li>
+            <li>GET /tasks/{id}</li>
+            <li>PUT /tasks</li>
+            <li>DELETE /tasks/{id}</li>
+            <li>PUT /tasks/{id}/execute</li>
+        </ul>
+    </div>
+</body>
+</html>
